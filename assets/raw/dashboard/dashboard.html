@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="firstSec">
+            <div class="hamb">
+                <span class="fa fa-bars" style="color: #dedede; font-size: 23px;" aria-hidden="true"></span>
+            </div>
+            <div class="brand" style="display:flex; padding-top: 5px; box-sizing: border-box;">
+                <a class="navbar-brand" href="#" style="color: #ffffff;">
+                    <img src="noun_live_2146891.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                    &nbsp;Videostream
+                </a>
+            </div>
+        </div>
+        <div class="middleSec">
+                <form action="">
+                    <input type="search" autocomplete="off" placeholder="search for..." id="form1" class="search-input"  >
+                    <button type="submit" class="searchButton">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+        </div>
+        <div class="endSec">
+            <ul class="endList" style="padding-top: 5px;">
+                <li class="">
+                    <a class="nav-link" href="/upload" style="color: #dedede;">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                       Upload Video
+                    </a>
+                 </li>
+                 <li class="userDropdown">
+                    <a class="nav-link dropdown-tog user-dropdown-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #dedede;">
+                       <img alt="Avatar" id="my-profile-picture" style="object-fit: cover;" onerror ="this.src = 'user_placeholder.jpg'">
+                       <span id="username"></span>
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; My Channel</a></li>
+                        <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Setting</a></li>
+                        <hr>
+                        <li><a href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp; Logout</a></li>
+                    </ul>
+                 </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main-content">
+        <div class="sidebar">
+            <ul class="sideNav">
+                <li class="sideNav_item">
+                    <img src="Path 28126.svg" alt="Home" style="width: 25px; height: 25px;">
+                    <a href="#">Home</a>
+                </li>
+                <li class="sideNav_item">
+                    <img src="Path 28127.svg" alt="Trending" style="width: 25px; height: 25px;">
+                    <a href="#">Trending</a>
+                </li>
+                <li class="sideNav_item">
+                    <img src="Group 26221.svg" alt="Library" style="width: 25px; height: 25px;">
+                    <a href="#">Library</a>
+                </li>
+            </ul>    
+        </div>
+        <div class="videoSection">
+            <div class="col-xl-3 col-sm-6 mb-3">
+                <div class="video-card">
+                    <img class="card-img" src="sadhguru.png" alt="thumbnail" width="100%" height="30%">
+                    <div class="card-info">
+                        <p class="card-title">Video Title</p>
+                        <span class="card-icon"><img src="user_placeholder.jpg" alt="user" width="30px" height="30px"> &nbsp; Video description</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+                <div class="video-card">
+                    <img class="card-img" src="arya.png" alt="thumbnail" width="100%" height="30%">
+                    <div class="card-info">
+                        <p class="card-title">Video Title</p>
+                        <span class="card-icon"><img src="user_placeholder.jpg" alt="user" width="30px" height="30px"> &nbsp; Video description</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+                <div class="video-card">
+                    <img class="card-img" src="Fatrat.png" alt="thumbnail" width="100%" height="30%">
+                    <div class="card-info">
+                        <p class="card-title">Video Title</p>
+                        <span class="card-icon"><img src="user_placeholder.jpg" alt="user" width="30px" height="30px"> &nbsp; Video description</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+                <div class="video-card">
+                    <img class="card-img" src="ncs.png" alt="thumbnail" width="100%" height="30%">
+                    <div class="card-info">
+                        <p class="card-title">Video Title</p>
+                        <span class="card-icon"><img src="user_placeholder.jpg" alt="user" width="30px" height="30px"> &nbsp; Video description</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+                <div class="video-card">
+                    <img class="card-img" src="sadhguru.png" alt="thumbnail" width="100%" height="30%">
+                    <div class="card-info">
+                        <p class="card-title">Video Title</p>
+                        <span class="card-icon"><img src="user_placeholder.jpg" alt="user" width="30px" height="30px"> &nbsp; Video description</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+                <div class="video-card">
+                    <img class="card-img" src="arya.png" alt="thumbnail" width="100%" height="30%">
+                    <div class="card-info">
+                        <p class="card-title">Video Title</p>
+                        <span class="card-icon"><img src="user_placeholder.jpg" alt="user" width="30px" height="30px"> &nbsp; Video description</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+                <div class="video-card">
+                    <img class="card-img" src="ncs.png" alt="thumbnail" width="100%" height="30%">
+                    <div class="card-info">
+                        <p class="card-title">Video Title</p>
+                        <span class="card-icon"><img src="user_placeholder.jpg" alt="user" width="30px" height="30px"> &nbsp; Video description</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-3">
+                <div class="video-card">
+                    <img class="card-img" src="Fatrat.png" alt="thumbnail" width="100%" height="30%">
+                    <div class="card-info">
+                        <p class="card-title">Video Title</p>
+                        <span class="card-icon"><img src="user_placeholder.jpg" alt="user" width="30px" height="30px"> &nbsp; Video description</span>
+                    </div>
+                </div> 
+            </div>
+
+        </div>
+    </div>
+    
+    
+</body>
+</html>
