@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="firstSec">
+            <div class="hamb">
+                <span class="fa fa-bars" style="color: #dedede; font-size: 23px;" aria-hidden="true"></span>
+            </div>
+            <div class="brand" style="display:flex; padding-top: 5px; box-sizing: border-box;">
+                <a class="navbar-brand" href="#" style="color: #ffffff;">
+                    <img src="noun_live_2146891.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                    &nbsp;Videostream
+                </a>
+            </div>
+        </div>
+        <div class="middleSec">
+                <form action="">
+                    <input type="search" autocomplete="off" placeholder="search for..." id="form1" class="search-input"  >
+                    <button type="submit" class="searchButton">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+        </div>
+        <div class="endSec">
+            <ul class="endList" style="padding-top: 5px;">
+                <li class="">
+                    <a class="nav-link" href="/upload" style="color: #dedede;">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                       Upload Video
+                    </a>
+                 </li>
+                 <li class="userDropdown">
+                    <a class="nav-link dropdown-tog user-dropdown-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #dedede;">
+                       <img alt="Avatar" id="my-profile-picture" style="object-fit: cover;" onerror ="this.src = 'user_placeholder.jpg'">
+                       <span id="username"></span>
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; My Channel</a></li>
+                        <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Setting</a></li>
+                        <hr>
+                        <li><a href="#" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp; Logout</a></li>
+                    </ul>
+                 </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main-content">
+        <div class="sidebar">
+            <ul class="sideNav">
+                <li class="sideNav_item">
+                    <img src="Path 28126.svg" alt="Home" style="width: 25px; height: 25px;">
+                    <a href="#">Home</a>
+                </li>
+                <li class="sideNav_item">
+                    <img src="Path 28127.svg" alt="Trending" style="width: 25px; height: 25px;">
+                    <a href="#">Trending</a>
+                </li>
+                <li class="sideNav_item">
+                    <img src="Group 26221.svg" alt="Library" style="width: 25px; height: 25px;">
+                    <a href="#">Library</a>
+                </li>
+            </ul>    
+        </div>
+        <div class="video-player">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <video id="videoPlayer" width="750px" height="400px" controls autoplay loop>
+                                    <source src="https://youtu.be/sCbbMZ-q4-I" type="video/webm">
+                                    <source src="https://youtu.be/sCbbMZ-q4-I" type="video/mp4" />
+                                </video>
+                            </div>
+                            <div class="row">
+                                <h3 style="margin-left: 20px; color: #dedede;">Video title </h3>
+                                <span style="margin-left: 20px; color: #767c7e;">12,36827 views</span>
+                            </div>
+                            <hr style="background-color: #434a4d;">
+                            <div class="row" style="flex-direction: row;">
+                                <div class="col-md-1 ">
+                                    <span ><img src="user_placeholder.jpg" alt="user image" style="border-radius: 50%; width: 40px; height: 40px; border: 2px solid #ffffff;"></span>
+                                </div>
+                                <div class="col-md-11 ">
+                                    <div class="author" style="color: #dedede; margin-bottom: 20px;">Author</div>
+                                    <div class="videoTitle">Video Title</div>
+                                    <div class="desc">Video description</div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 30px;">
+                                <div class="card" style="width: 13rem; height: 18rem;">
+                                    <img class="card-img-top" src="arya.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Video title</h5>
+                                        <p class="card-text">Some description about video</p>
+                                        <a href="#" class="watch-button">Watch</a>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 13rem; height: 18rem;">
+                                    <img class="card-img-top" src="Fatrat.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Video title</h5>
+                                        <p class="card-text">Some description about video</p>
+                                        <a href="#" class="watch-button">Watch</a>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 13rem; height: 18rem;">
+                                    <img class="card-img-top" src="ncs.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title tileOfVideo">Video title</h5>
+                                        <p class="card-text">Some description about video</p>
+                                        <a href="#" class="watch-button" type="button">Watch</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="chat-box" style="margin-left: 20px;">
+                                <div class="chat-title">Add a public comment</div>
+                               
+                                    <div class="chat-content">
+                                        <div class="row">
+                                            <form action="">
+                                                    <div class="form-group">
+                                                        <p><textarea name="comment" placeholder="Add comment" id="comment" cols="30" rows="2"></textarea></p>
+                                                    </div> 
+                                            </form>
+                                        </div>
+                                        <span class="content">User1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nobis obcaecati. Sunt voluptatum alias officia libero maxime asperiores, tenetur doloribus nisi id consequatur officiis voluptates ullam mollitia laudantium a consequuntur.</span>
+                                        <span class="content">User2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nobis obcaecati. Sunt voluptatum alias officia libero maxime asperiores, tenetur doloribus nisi id consequatur officiis voluptates ullam mollitia laudantium a consequuntur.</span>
+                                        <span class="content">User3: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nobis obcaecati. Sunt voluptatum alias officia libero maxime asperiores, tenetur doloribus nisi id consequatur officiis voluptates ullam mollitia laudantium a consequuntur.</span>
+                                        <span class="content">USer4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nobis obcaecati. Sunt voluptatum alias officia libero maxime asperiores, tenetur doloribus nisi id consequatur officiis voluptates ullam mollitia laudantium a consequuntur.</span>
+                                        <span class="content">USer4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nobis obcaecati. Sunt voluptatum alias officia libero maxime asperiores, tenetur doloribus nisi id consequatur officiis voluptates ullam mollitia laudantium a consequuntur.</span>
+                                        <span class="content">USer4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nobis obcaecati. Sunt voluptatum alias officia libero maxime asperiores, tenetur doloribus nisi id consequatur officiis voluptates ullam mollitia laudantium a consequuntur.</span>
+                                        <span class="content">USer4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nobis obcaecati. Sunt voluptatum alias officia libero maxime asperiores, tenetur doloribus nisi id consequatur officiis voluptates ullam mollitia laudantium a consequuntur.</span>
+                                        <span class="content">USer4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nobis obcaecati. Sunt voluptatum alias officia libero maxime asperiores, tenetur doloribus nisi id consequatur officiis voluptates ullam mollitia laudantium a consequuntur.</span>
+                                        <span class="content">USer4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nobis obcaecati. Sunt voluptatum alias officia libero maxime asperiores, tenetur doloribus nisi id consequatur officiis voluptates ullam mollitia laudantium a consequuntur.</span>
+                                        <span class="content">USer4: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nobis obcaecati. Sunt voluptatum alias officia libero maxime asperiores, tenetur doloribus nisi id consequatur officiis voluptates ullam mollitia laudantium a consequuntur.</span>  
+                                    </div>
+                                </div>                          
+                            </div>
+                        </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+    
+</body>
+</html>
