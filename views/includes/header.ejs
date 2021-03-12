@@ -2,148 +2,124 @@
 <html lang="en">
 
 <head>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <meta name="description" content="Askbootstrap">
-   <meta name="author" content="Askbootstrap">
-   <title>VIDOE - Video Streaming Website HTML Template</title>
-   <!-- Favicon Icon -->
-   <link rel="icon" type="image/png" href="public/img/favicon.png">
-   <!-- Bootstrap core CSS-->
-   <link href="/public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-   <!-- Custom fonts for this template-->
-   <link href="/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-   <!-- Custom styles for this template-->
-   <link href="/public/css/osahan.css" rel="stylesheet">
-   <!-- Owl Carousel -->
-   <link rel="stylesheet" href="/public/vendor/owl-carousel/owl.carousel.css">
-   <link rel="stylesheet" href="/public/vendor/owl-carousel/owl.theme.css">
-
-   <link rel="stylesheet" type="text/css" href="/public/css/macOSNotif.min.css">
-   <link rel="stylesheet" type="text/css" href="/public/css/x0popup.min.css">
-   <link rel="stylesheet" type="text/css" href="/public/css/video-js.css">
-
-   <link rel="stylesheet" href="/public/css/alertify.min.css">
-
-   <script src="/public/vendor/jquery/jquery.min.js"></script>
-   <style type="text/css">
-      .thumbnail {
-         width: 370px;
-         height: 270px;
-         object-fit: cover;
-      }
-      .ajs-success {
-         color: white;
-      }
-   </style>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="/public/css/style.css  ">
+  <title>Dashboard</title>
 </head>
 
-<%
-   mainURL = "http://localhost:3000"
-%>
+<% mainURL="http://localhost:3000" %>
+  <script>
+    var mainURL = "http://localhost:3000";
+  </script>
 
-<script>
-   var mainURL = "http://localhost:3000";
-</script>
-
-<body id="page-top">
-
-   <nav class="navbar navbar-expand navbar-light bg-white static-top osahan-nav sticky-top">
-         &nbsp;&nbsp;
-         <button class="btn btn-link btn-sm text-secondary order-1 order-sm-0" id="sidebarToggle">
-         <i class="fas fa-bars"></i>
-         </button> &nbsp;&nbsp;
-         <a class="navbar-brand mr-1" href="/"><img class="img-fluid" alt="" src="public/img/logo.png"></a>
-         <!-- Navbar Search -->
-         <form method="GET" action="/search" class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-5 my-2 my-md-0 osahan-navbar-search">
-            <div class="input-group">
-               <input autocomplete="off" type="text" name="search_query" class="form-control" placeholder="Search for...">
-               <div class="input-group-append">
-                  <button class="btn btn-light" type="submit">
-                  <i class="fas fa-search"></i>
-                  </button>
-               </div>
-            </div>
-         </form>
-         <!-- Navbar -->
-
-         <ul class="navbar-nav ml-auto ml-md-0 osahan-right-navbar">
-
-            <% if (isLogin) { %>
-               <li class="nav-item mx-1">
-                  <a class="nav-link" href="/upload">
-                     <i class="fas fa-plus-circle fa-fw"></i>
-                     Upload Video
-                  </a>
-               </li>
-
-               <li class="nav-item dropdown no-arrow osahan-right-navbar-user">
-                  <a class="nav-link dropdown-toggle user-dropdown-link" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     <img alt="Avatar" id="my-profile-picture" style="object-fit: cover;" onerror="this.src = '/public/img/user_placeholder.jpg'">
-                     <span id="username"></span>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                     <a class="dropdown-item" href="/my_channel"><i class="fas fa-fw fa-user"></i> &nbsp; My Channel</a>
-                     <a class="dropdown-item" href="/my_settings"><i class="fas fa-fw fa-cog"></i> &nbsp; Settings</a>
-                     <div class="dropdown-divider"></div>
-                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-fw fa-sign-out-alt"></i> &nbsp; Logout</a>
-                  </div>
-               </li>
+  <body>
+    <nav class="nav-bar">
+      <div class="firstSec">
+        <div class="hamb">
+          <span class="fa fa-bars" style="color: #dedede; font-size: 23px;" aria-hidden="true"></span>
+        </div>
+        <div class="brand" style="display:flex; padding-top: 5px; box-sizing: border-box;">
+          <a class="navbar-brand" href="#" style="color: #ffffff;">
+            <img src="/public/img/video-icon.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            &nbsp;Videostream
+          </a>
+        </div>
+      </div>
+      <div class="middleSec">
+        <form method="GET" action="/search">
+          <input type="search" autocomplete="off" placeholder="search for..." id="form1" class="search-input">
+          <button type="submit" class="searchButton">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+      <div class="endSec">
+        <ul class="endList" style="padding-top: 5px;">
+          <% if (isLogin) { %>
+            <li class="">
+              <a class="nav-link" href="/upload" style="color: #dedede;">
+                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                Upload Video
+              </a>
+            </li>
+            <li class="userDropdown">
+              <a class="nav-link dropdown-tog user-dropdown-link" href="#" id="userDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #dedede;">
+                <img alt="Avatar" id="my-profile-picture" style="object-fit: cover;"
+                  onerror="this.src = 'user_placeholder.jpg'">
+                <span id="username"></span>
+              </a>
+              <ul class="dropdown">
+                <li><a href="/my_channel"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; My Channel</a></li>
+                <li><a href="/my_settings"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp; Setting</a></li>
+                <hr>
+                <li><a href="/logout" data-toggle="modal" data-target="#logoutModal"><i class="fa fa-sign-out"
+                      aria-hidden="true"></i>&nbsp; Logout</a></li>
+              </ul>
+            </li>
             <% } else { %>
-                <li class="nav-item mx-1">
-                    <a class="nav-link" href="/login"><i class="fas fa-fw fa-user-circle"></i> &nbsp; Login</a>
-                </li>
 
-                <li class="nav-item mx-1">
-                    <a class="nav-link" href="/register"><i class="fas fa-fw fa-user"></i> &nbsp; Register</a>
-                </li>
-            <% } %>
-         </ul>
-      </nav>
+              <li class="">
+                <a class="nav-link" href="/login" style="color: #dedede">
+                  <i aria-hidden="true"></i>
+                  Login
+                </a>
+              </li>
 
-      <%
-         months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      %>
+              <li class="">
+                <a class="nav-link" href="/register" style="color: #dedede">
+                  <iaria-hidden="true"></i>
+                    Register
+                </a>
+              </li>
+
+              <% } %>
+        </ul>
+      </div>
+    </nav>
+
+    <% months=["January", "February" , "March" , "April" , "May" , "June" , "July" , "August" , "September" , "October"
+      , "November" , "December" ]; %>
 
       <script type="text/javascript">
-         var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var months = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
       </script>
 
-      <% if (isLogin) { %>
-         <script type="text/javascript">
-
-            var ajax = new XMLHttpRequest();
-            ajax.open("GET", "/get_user", true);
-
-            ajax.onreadystatechange = function () {
-               if (this.readyState == 4 && this.status == 200) {
-                  var response = JSON.parse(this.responseText);
-
-                  if (response.status == "success") {
-                     window.user = response.user;
-                     document.getElementById("username").innerHTML = user.first_name + " " + user.last_name;
-                     document.getElementById("my-profile-picture").setAttribute("src", window.user.image);
-                  }
-               }
-            };
-
-            ajax.send();
-         </script>
-      <% } %>
-
-      <div id="wrapper">
-
-         <!-- Sidebar -->
-         <ul class="sidebar navbar-nav" id="left-sidebar">
-
-            <li class="nav-item <%= url == '/' ? 'active' : '' %>">
-               <a class="nav-link" href="/">
-               <i class="fas fa-fw fa-home"></i>
-               <span>Home</span>
-               </a>
+      <div class="main-content">
+        <div class="sidebar">
+          <ul class="sideNav">
+            <li class="sideNav_item">
+              <img src="/public/img/Home.svg" alt="Home" style="width: 25px; height: 25px;">
+              <a href="#">Home</a>
             </li>
-         </ul>
-
-         <div id="content-wrapper" class="<%= typeof headerClass == "undefined" ? '' : headerClass %>">
+            <li class="sideNav_item">
+              <img src="/public/img/Trending.svg" alt="Trending" style="width: 25px; height: 25px;">
+              <a href="#">Trending</a>
+            </li>
+            <li class="sideNav_item">
+              <img src="/public/img/Library.svg" alt="Library" style="width: 25px; height: 25px;">
+              <a href="#">Library</a>
+            </li>
+          </ul>
+        </div>

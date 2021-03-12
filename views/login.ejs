@@ -33,12 +33,25 @@
             <div class="form-group">
               <div class="userExist">
                 <span
-                  >Not a member?<a class="login" style="color: #ffe032" href="/register"
+                  >Not a member? <a class="login" style="color: #ffe032" href="/register"
                     >Sign up</a
                   ></span
                 >
               </div>
             </div>
+
+            <% if (message != "") { %>
+              <div class="alert alert-success">
+                 <%= message %>
+              </div>
+           <% } %>
+
+           <% if (error != "") { %>
+              <div class="alert alert-danger">
+                 <%= error %>
+              </div>
+           <% } %>
+
             <form action="/login" method="POST">
               <br />
               <h2 style="margin-left: 82px; margin-bottom: 30px">Sign in</h2>
